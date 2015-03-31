@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- This file is protected by Copyright. Please refer to the COPYRIGHT file 
-  distributed with this source distribution. This file is part of REDHAWK IDE. 
-  All rights reserved. This program and the accompanying materials are made 
-  available under the terms of the Eclipse Public License v1.0 which accompanies 
+<!-- This file is protected by Copyright. Please refer to the COPYRIGHT file
+  distributed with this source distribution. This file is part of REDHAWK IDE.
+  All rights reserved. This program and the accompanying materials are made
+  available under the terms of the Eclipse Public License v1.0 which accompanies
   this distribution, and is available at http://www.eclipse.org/legal/epl-v10.html. -->
 <project
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
@@ -25,16 +25,14 @@
     <orbit>http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository</orbit>
     <nxm>http://nextmidas.techma.com/p2/nxm/updates/latest</nxm>
     <nxm-rcp>http://nextmidas.techma.com/p2/nxm.ui/updates/latest/</nxm-rcp>
-    <mil.jpeojtrs.sca>http://download.redhawksdr.org/mil.jpeojtrs.sca/releases/2.0</mil.jpeojtrs.sca>
-    <gov.redhawk.core>http://download.redhawksdr.org/gov.redhawk.core/releases/2.0</gov.redhawk.core>
-    <gov.redhawk.ide>http://download.redhawksdr.org/gov.redhawk.ide/releases/2.0</gov.redhawk.ide>
-    <gov.redhawk.codegen>http://download.redhawksdr.org/gov.redhawk.codegen/releases/2.0</gov.redhawk.codegen>
-    <jacorb>http://download.redhawksdr.org/jacorb/updates/stable</jacorb>
+    <mil.jpeojtrs.sca>http://redhawk-ide-p2.s3-website-us-east-1.amazonaws.com/mil.jpeojtrs.sca-2.0</mil.jpeojtrs.sca>
+    <gov.redhawk.core>http://redhawk-ide-p2.s3-website-us-east-1.amazonaws.com/gov.redhawk.core-2.0</gov.redhawk.core>
+    <gov.redhawk.ide>http://redhawk-ide-p2.s3-website-us-east-1.amazonaws.com/gov.redhawk.ide-2.0</gov.redhawk.ide>
+    <gov.redhawk.codegen>http://redhawk-ide-p2.s3-website-us-east-1.amazonaws.com/gov.redhawk.codegen-2.0</gov.redhawk.codegen>
+    <jacorb>http://redhawk-ide-p2.s3-website-us-east-1.amazonaws.com/jacorb</jacorb>
     <pydev>http://pydev.org/updates/</pydev>
     <nebula>http://download.eclipse.org/technology/nebula/archives/Q32014/release</nebula>
-    <idl-editor>http://download.redhawksdr.org/idl-editor</idl-editor>
-    <svn-connector>http://community.polarion.com/projects/subversive/download/eclipse/3.0/update-site/</svn-connector>
-    <subversive>http://download.eclipse.org/technology/subversive/1.1/update-site/</subversive>
+    <idl-editor>http://redhawk-ide-p2.s3-website-us-east-1.amazonaws.com/idl-editor</idl-editor>
     <eclipse>http://download.eclipse.org/releases/mars/</eclipse>
   </properties>
 
@@ -44,18 +42,6 @@
       <id>eclipse</id>
       <layout>p2</layout>
       <url>${eclipse}</url>
-    </repository>
-    
-    <repository>
-      <id>svn-connector</id>
-      <layout>p2</layout>
-      <url>${svn-connector}</url>
-    </repository>
-
-    <repository>
-      <id>subversive</id>
-      <layout>p2</layout>
-      <url>${subversive}</url>
     </repository>
 
     <repository>
@@ -165,11 +151,11 @@
         <version>${tycho-version}</version>
         <configuration>
           <environments>
-            <environment>
+            <!--<environment>
               <os>linux</os>
               <ws>gtk</ws>
               <arch>x86</arch>
-            </environment>
+            </environment>-->
             <environment>
               <os>linux</os>
               <ws>gtk</ws>

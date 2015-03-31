@@ -1,0 +1,28 @@
+language: java
+before_install:
+- sudo apt-get update -qq
+- git clone https://github.com/ryanbauman/redhawk-ide-parent.git
+install:
+- sudo apt-get install omniorb-idl
+- cd redhawk-ide-parent/parent
+- mvn install -q -DskipTests=true
+- cd ../../releng
+script:
+- mvn install -q -DskipTests=true
+- rm -rf product/target/products/gov.redhawk.e4.platform.ide
+deploy:
+  skip_cleanup: true
+  provider: s3
+  access_key_id: AKIAIKDGXL4XUOA7LAAQ
+  secret_access_key:
+    secure: aflDHcVREVQcwDdfVT7XK9w2hyMWh3vRE8uHWjRQO+C+jcmojAVyF1A4l1vyguTcOgyRuYAaWLnbZnVuMTpbPjxRvGLXmwujhfpGofl+zgVF/HCrTmLR38QuiAjy7xz/l36mwJ8il3q61iC1kDJmHrOty4sfk4uHlSK80q+WiFk=
+  bucket: redhawk-ide-p2
+  local-dir: product/target/products
+  upload-dir: redhawk-ide-product-2.0
+  acl: public_read
+  on:
+    repo: Axios-Engineering/gov.redhawk.ide.product
+    branch: develop-2.0
+notifications:
+  slack:
+    secure: jg4VJnmbkKkLuuV78Q0VRJrJyMoxMZq6wvqSxJYzVZxGXf+90Cab6z+/6SZUQo8XWFXMYab8qaqn0Ew/PNVFeDtY4PvpzB2pmAA4udUfy0XksMexqNmKAMu3O8NEe+pfIDpqJfrABCnnAX9JFSda0GAKsBpEknGqGWJSr8+OUco=
