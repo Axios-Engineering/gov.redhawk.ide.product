@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/Axios-Engineering/gov.redhawk.ide.product.svg?branch=develop-2.0)](https://travis-ci.org/Axios-Engineering/gov.redhawk.ide.product)
-[Download latest snapshot](https://s3.amazonaws.com/redhawk-ide-p2/redhawk-ide-product-2.0/redhawk-ide-2.0.0.SNAPSHOT201507272013-linux.gtk.x86_64.tar.gz)
+[Download latest snapshot](https://s3.amazonaws.com/redhawk-ide-p2/redhawk-ide-product-2.0/redhawk-ide-2.0.0.SNAPSHOT201509042139-linux.gtk.x86_64.tar.gz)
 # REDHAWK IDE Product
 
 ## Description
